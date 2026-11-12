@@ -1,0 +1,28 @@
+# Departments are the unit of access control. Every document belongs to one.
+departments: [finance, hr, marketing, executive, general]
+
+# Which departments each role may READ. "*" means all departments.
+role_grants:
+  finance:   [finance, marketing, general]
+  hr:        [hr, general]
+  marketing: [marketing, general]
+  executive: ["*"]
+
+# Which departments each role may UPLOAD to and DELETE from.
+write_grants:
+  finance:   [finance]
+  hr:        [hr]
+  marketing: [marketing]
+  executive: ["*"]
+
+# Roles allowed to open the Analytics page.
+analytics_roles: [executive]
+
+# Each user's work email is used for Google sign-in. Replace the placeholders with real addresses.
+# Demo identities. Passwords are set with: python -m rag.cli set-password <user_id>
+
+users:
+  amara.osei:
+    name: Amara Osei (CEO)
+    email: kumarreddyyeddulapavan8@gmail.com
+    roles: [executive]

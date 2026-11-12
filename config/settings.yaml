@@ -1,0 +1,21 @@
+ingestion:
+  max_chunk_chars: 700
+  max_upload_mb: 10
+retrieval:
+  top_k: 6
+  min_score: 0.1          # cheap recall filter; the grounding check decides answerability
+  history_turns: 6        # previous messages used to resolve follow-up questions
+monitoring:
+  log_path: logs/queries.jsonl
+  feedback_path: logs/feedback.jsonl
+  daily_budget_usd: 5.0
+auth:
+  max_failed_logins: 5
+  lockout_seconds: 300
+  min_password_length: 10
+eval_thresholds:          # CI fails if any of these are not met
+  refusal_accuracy: 0.9
+  keyword_recall: 0.8
+  source_hit_rate: 0.85
+  rbac_leaks: 0
+  pii_leaks: 0

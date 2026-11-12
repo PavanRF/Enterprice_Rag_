@@ -1,0 +1,17 @@
+# Customize the look of the app. Edit freely; no code changes needed.
+app_name: Northwind Assistant
+tagline: Ask your company's documents. Only see what you're allowed to.
+accent_color: "#4F8BF9"
+
+# Login and app background presets. Users can pick one on the login page.
+# Each value is any valid CSS background value (gradient, color, or url(...)).
+backgrounds:
+  Midnight: "linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #312e81 100%)"
+  Ocean: "linear-gradient(135deg, #0ea5e9 0%, #2563eb 60%, #1e3a8a 100%)"
+  Sunset: "linear-gradient(135deg, #f97316 0%, #db2777 55%, #7e22ce 100%)"
+  Forest: "linear-gradient(135deg, #064e3b 0%, #059669 60%, #a7f3d0 100%)"
+
+# Optional: a photo used as the background instead of a preset.
+# Put the file in assets/ and set its name here, e.g. background_image: office.jpg
+background_image: ""
+default_background: Midnight

@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test-and-evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Unit and security tests (RBAC, guardrails, pipeline)
+        run: python -m unittest discover -s tests -v
+      - name: Evaluation gate (quality and leak thresholds)
+        run: PYTHONPATH=src python -m rag.cli eval --report eval_report.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-report
+          path: eval_report.json

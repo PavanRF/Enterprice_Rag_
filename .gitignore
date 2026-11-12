@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+logs/*.jsonl
+logs/*.json
+.venv/
+data/auth/
+logs/*.jsonl
+logs/*.json
+.env
+
+.streamlit/secrets.toml
