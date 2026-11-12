@@ -26,3 +26,18 @@ users:
     name: Amara Osei (CEO)
     email: kumarreddyyeddulapavan8@gmail.com
     roles: [executive]
+
+  priya.sharma:
+    name: Priya Sharma
+    email: priya.sharma@company.com
+    roles: [finance]
+
+  james.okoro:
+    name: James Okoro
+    email: james.okoro@company.com
+    roles: [hr]
+
+  lena.muller:
+    name: Lena Muller
+    email: lena.muller@company.com
+    roles: [marketing]
